@@ -1,5 +1,4 @@
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 
 public class PhoneBook {
 
@@ -30,6 +29,8 @@ public class PhoneBook {
     }
 
     public String printAllNames() {
-        return null;
+        List<String> listNameSorted = new ArrayList<>(mapPhoneBook.keySet());
+        Collections.sort(listNameSorted);
+        return String.join(", ", listNameSorted);
     }
 }
