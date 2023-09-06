@@ -10,6 +10,9 @@ public class PhoneBook {
     }
 
     public int add(String name, String number) {
-        return 0;
+        if (!mapPhoneBook.containsKey(name)) {
+            mapPhoneBook.put(name, number);
+        }
+        return mapPhoneBook.size();
     }
 }
