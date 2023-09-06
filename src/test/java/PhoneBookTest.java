@@ -31,4 +31,13 @@ public class PhoneBookTest {
         assertEquals("89500000011", phoneBook.findByName("Мария"));
         assertEquals("89500000022", phoneBook.findByName("Алексей"));
     }
+
+    @Test
+    public void testPrintAllNames() {
+        PhoneBook phoneBook = new PhoneBook();
+        phoneBook.add("Мария", "89500000011");
+        phoneBook.add("Алексей", "89500000022");
+        phoneBook.add("Илья", "89500000033");
+        assertEquals("Алексей, Илья, Мария", phoneBook.printAllNames());
+    }
 }
